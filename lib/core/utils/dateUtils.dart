@@ -12,11 +12,10 @@ class DateAndTimeUtil {
     private static final SimpleDateFormat WEEK_DAYS_FORMAT = new SimpleDateFormat("EEEE", Locale.getDefault());
     private static final SimpleDateFormat SHORT_WEEK_DAYS_FORMAT = new SimpleDateFormat("E", Locale.getDefault());
    */
-  var DATE_FORMAT =  DateFormat('yyyy-MM-dd');
-  static var READABLE_DAY_MONTH_YEAR_FORMAT =
-       DateFormat('d MMM, y hh:mm aa');
-  static var READABLE_DATE_FORMAT =  DateFormat('d MMM, y');
-  static var READABLE_TIME_FORMAT =  DateFormat('hh:mm aa');
+  var DATE_FORMAT = DateFormat('yyyy-MM-dd');
+  static var READABLE_DAY_MONTH_YEAR_FORMAT = DateFormat('d MMM, y hh:mm aa');
+  static var READABLE_DATE_FORMAT = DateFormat('d MMM, y');
+  static var READABLE_TIME_FORMAT = DateFormat('hh:mm aa');
 
   static var serverDateFormat =
       DateFormat("yyyy-MM-ddTHH:mm:ss.sss"); //YYYY-MM-DDTHH:mm:ss.sssZ
@@ -41,8 +40,8 @@ class DateAndTimeUtil {
   static String dayMonthYearFormat(String milliseconds) {
     //int millis = int.parse(milliseconds);
 
-    var now =  DateTime.now().toLocal();
-    var format =  DateFormat('HH:mm a');
+    var now = DateTime.now().toLocal();
+    var format = DateFormat('HH:mm a');
     var date = DateTime.parse(
         milliseconds); //new DateTime.fromMillisecondsSinceEpoch(millis * 1000);
     var diff = now.difference(date);
